@@ -246,16 +246,3 @@ Dimensions: [128, 128]
 Scalar type: INT16
 Pixel byte length: 32768
 ```
-
-## Repository Notes
-
-- Sample DICOM files should only be published if they are public, synthetic, or
-  fully de-identified.
-- Java currently loads the native JNI library with `-Djava.library.path`.
-- Python currently uses the build output directory directly instead of a wheel.
-- Pixel data is returned as raw bytes plus metadata; callers convert it to typed
-  arrays in Python, Java, or Scala.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
