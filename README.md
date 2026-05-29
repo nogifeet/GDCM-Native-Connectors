@@ -58,7 +58,8 @@ brew install gdcm cmake
 If CMake cannot find GDCM automatically, pass the GDCM CMake package directory:
 
 ```sh
-cmake -S . -B build -DGDCM_DIR=/path/to/gdcm/lib/cmake/gdcm
+cmake -S . -B build -DGDCM_DIR=./gdcm_build
+cmake -S . -B build -DGDCM_DIR=/opt/homebrew/opt/gdcm/lib/cmake/gdcm
 ```
 
 ## Build
