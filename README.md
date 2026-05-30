@@ -58,8 +58,8 @@ brew install gdcm cmake
 If CMake cannot find GDCM automatically, pass the GDCM CMake package directory:
 
 ```sh
+#DGCM_DIR=/opt/homebrew/opt/gdcm/lib/cmake/gdcm
 cmake -S . -B build -DGDCM_DIR=./gdcm_build
-cmake -S . -B build -DGDCM_DIR=/opt/homebrew/opt/gdcm/lib/cmake/gdcm
 ```
 
 ## Build
@@ -89,7 +89,7 @@ In a notebook, add the build output directory to `sys.path` before importing:
 ```python
 import sys
 
-sys.path.insert(0, "/Users/nitin/Documents/Connector_C++/build/python")
+sys.path.insert(0, "../../build/python")
 
 import gdcm_connector
 ```
@@ -97,7 +97,7 @@ import gdcm_connector
 Then call the methods:
 
 ```python
-file_path = "/Users/nitin/Documents/Connector_C++/dicom_samples/1-01.dcm"
+file_path = "../../dicom_samples/1-01.dcm"
 
 metadata = gdcm_connector.read_basic_metadata(file_path)
 modality = gdcm_connector.read_tag(file_path, 0x0008, 0x0060)
